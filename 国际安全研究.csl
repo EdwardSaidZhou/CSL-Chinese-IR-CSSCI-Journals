@@ -11,8 +11,8 @@
     <category field="chinese social science"/>
     <category field="chinese humanities"/>
     <summary>根据fanzhen《历史研究》引文规范、pulipuli制作的APA中文格式以及众多国际问题期刊引文规范改制，支持中英混排，仅支持今人论文、图书、章节、学位论文、网页</summary>
-    <published>2019-03-06</published>
-    <updated>2020-06-29T08:54:20+00:00</updated>
+    <published>2021-01-16</published>
+    <updated>2021-01-16</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
     <locale xml:lang="en">
@@ -126,7 +126,7 @@
       <else-if type="webpage" match="any">
         <text variable="title" prefix="“" suffix=",” "/>
         <text variable="container-title" font-style="italic" prefix="" suffix=", "/>
-        <date form="text" variable="issued" suffix="，"/>
+        <date form="text" variable="issued" suffix=", "/>
         <text variable="URL" prefix="" suffix=""/>
       </else-if>
       <else-if type="thesis" match="any">
@@ -229,11 +229,11 @@
           <text variable="page" prefix="，第" suffix="页。"/>
         </else-if>
         <else-if type="webpage" match="any">
-          <names variable="author" suffix="："/>
+          <text macro="author" suffix="："/>
           <text variable="title" prefix="《" suffix="》，"/>
           <text variable="container-title" suffix="，"/>
-          <date form="text" variable="issued" suffix=", "/>
-          <text variable="URL" prefix="\url{" suffix="}"/>
+          <date form="text" variable="issued" suffix="，"/>
+          <text variable="URL" prefix="" suffix=""/>
         </else-if>
         <else-if type="thesis" match="any">
           <text macro="author"/>
@@ -320,7 +320,7 @@
           <text variable="page" prefix="，第" suffix="页。"/>
         </else-if>
         <else-if type="webpage" match="any">
-          <names variable="author" suffix="："/>
+          <text macro="author" suffix="："/>
           <text variable="title" prefix="《" suffix="》，"/>
           <text variable="container-title" suffix="，"/>
           <date form="text" variable="issued" suffix="，"/>

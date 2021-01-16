@@ -14,7 +14,7 @@
     <category field="chinese humanities"/>
     <summary>根据历史研究/中国社会科学引文规定制作，支持中英混排，缺陷：1仅支持今人论文、图书、章节、学位论文、网页，2繁简请自行转换</summary>
     <published>2019-03-06</published>
-    <updated>2020-03-08T09:03:40+00:00</updated>
+    <updated>2021-01-16</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
     <locale xml:lang="en">
@@ -230,12 +230,10 @@
           <text variable="page" prefix="，第" suffix="页。"/>
         </else-if>
         <else-if type="webpage" match="any">
-                      <text macro="author" suffix="："/>
-      <text variable="title" prefix="《" suffix="》，"/>
-      <text macro="secondAuthor"/>
-          <text variable="title" prefix="《" suffix="》"/>
-          <text variable="container-title" prefix="《" suffix="》，"/>
-          <date form="text" variable="issued" suffix=", "/>
+          <text macro="author" suffix="："/>
+          <text variable="title" prefix="《" suffix="》，"/>
+          <text variable="container-title" suffix="，"/>
+          <date form="text" variable="issued" suffix="，"/>
           <text variable="URL" prefix=" " suffix="，"/>
           <date form="text" variable="accessed"/>
         </else-if>
@@ -325,13 +323,10 @@
           <text variable="page" prefix="，第" suffix="页。"/>
         </else-if>
         <else-if type="webpage" match="any">
-              <text macro="author" suffix="："/>
-      <text variable="title" prefix="《" suffix="》，"/>
-      <text macro="secondAuthor"/>
-      <text macro="container-title"/>
-          <text variable="title" prefix="《" suffix="》"/>
-          <text variable="container-title" prefix="《" suffix="》，"/>
-          <date form="text" variable="issued" suffix=", "/>
+          <text macro="author" suffix="："/>
+          <text variable="title" prefix="《" suffix="》，"/>
+          <text variable="container-title" suffix="，"/>
+          <date form="text" variable="issued" suffix="，"/>
           <text variable="URL" prefix=" " suffix="，"/>
           <date form="text" variable="accessed"/>
         </else-if>
