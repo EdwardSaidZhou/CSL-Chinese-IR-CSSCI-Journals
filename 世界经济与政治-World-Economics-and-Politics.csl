@@ -126,7 +126,7 @@
       <else-if type="webpage" match="any">
         <text variable="title" prefix="“" suffix=",” "/>
         <text variable="container-title" font-style="italic" suffix=", "/>
-        <date form="text" variable="issued" suffix="，"/>
+        <date form="text" variable="issued" suffix=", "/>
         <text variable="URL" suffix=""/>
         <date variable="accessed" prefix=", 访问时间：">
           <date-part name="year" suffix="年"/>
