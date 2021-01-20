@@ -248,7 +248,7 @@
         <text variable="locator" prefix="，第" suffix="页。"/>
         </else-if>
         <else>
-          <text variable="abstract" prefix="[" suffix="] "/>
+          <text variable="archive_location" prefix="[" suffix="] "/>
           <text macro="author" suffix="著"/>
           <text macro="secondAuthor" prefix="，" />
           <text variable="title" prefix="：《" suffix="》，"/>
@@ -340,7 +340,7 @@
         <text variable="locator" prefix="，第" suffix="页。"/>
         </else-if>
         <else>
-          <text variable="abstract" prefix="[" suffix="] "/>
+          <text variable="archive_location" prefix="[" suffix="] "/>
           <text macro="author" suffix="著"/>
           <text macro="secondAuthor" prefix="，" />
           <text variable="title" prefix="：《" suffix="》，"/>
