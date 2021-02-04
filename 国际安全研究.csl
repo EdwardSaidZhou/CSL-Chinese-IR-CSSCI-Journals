@@ -91,6 +91,10 @@
     </names>
     <choose>
       <if type="book" match="any">
+          <names variable="editor" prefix="" suffix=", ">
+          <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
+          <label form="short" prefix=" "/>
+        </names>
         <names variable="translator" suffix=", ">
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
           <label form="short" prefix=" "/>
@@ -172,7 +176,7 @@
     </group>
   </macro>
   <citation>
-    <layout locale="en English en-GB en-gb en-us en-US eng" suffix="">
+    <layout locale="en English en-GB en-gb en-us en-US eng" suffix="" delimiter=" ">
       <choose>
         <if position="ibid-with-locator">
           <group delimiter="">
@@ -189,7 +193,7 @@
       </else>
       </choose>
     </layout>
-    <layout suffix="">
+    <layout suffix="" delimiter=" ">
       <choose>
         <if position="ibid-with-locator">
           <group delimiter="，">
@@ -248,6 +252,7 @@
         </else-if>
         <else>
           <text macro="author" suffix="著"/>
+          <text macro="editor" suffix="" />
           <text variable="title" prefix="：《" suffix="》，"/>
           <text macro="secondAuthor" suffix="，" />
           <text variable="publisher-place" suffix="："/>
@@ -263,7 +268,7 @@
     <sort>
       <key variable="author"/>
     </sort>
-    <layout locale="en English en-GB en-gb en-us en-US eng" suffix="">
+    <layout locale="en English en-GB en-gb en-us en-US eng" suffix="" delimiter=" ">
       <choose>
         <if position="ibid-with-locator">
           <group delimiter="">
@@ -280,7 +285,7 @@
       </else>
       </choose>
     </layout>
-    <layout suffix="">
+    <layout suffix="" delimiter=" ">
       <choose>
         <if position="ibid-with-locator">
           <group delimiter="，">
@@ -339,6 +344,7 @@
         </else-if>
         <else>
           <text macro="author" suffix="著"/>
+          <text macro="editor" suffix="" />
           <text variable="title" prefix="：《" suffix="》，"/>
           <text macro="secondAuthor" suffix="，" />
           <text variable="publisher-place" suffix="："/>
