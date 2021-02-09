@@ -227,6 +227,7 @@
           <date form="text" variable="issued"/>
         </else-if>
         <else-if type="chapter" match="any">
+          <text variable="archive_location" prefix="[" suffix="]"/>
           <text macro="author"/>
           <text variable="title" prefix="：《" suffix="》，"/>
           <text macro="editor" prefix="载"/>
@@ -257,6 +258,7 @@
         <text variable="locator" prefix="，第" suffix="页。"/>
         </else-if>
         <else>
+          <text variable="archive_location" prefix="[" suffix="]"/>
           <text macro="author" suffix=""/>
           <text macro="editor" suffix="" />
           <text macro="secondAuthor" prefix="，" />
@@ -320,6 +322,7 @@
           <date form="text" variable="issued"/>
         </else-if>
         <else-if type="chapter" match="any">
+          <text variable="archive_location" prefix="[" suffix="]"/>
           <text macro="author"/>
           <text variable="title" prefix="：《" suffix="》，"/>
           <text macro="editor" prefix="载"/>
@@ -350,6 +353,7 @@
         <text variable="locator" prefix="，第" suffix="页。"/>
         </else-if>
         <else>
+          <text variable="archive_location" prefix="[" suffix="]"/>
           <text macro="author" suffix=""/>
           <text macro="editor" suffix="" />
           <text macro="secondAuthor" prefix="，" />
