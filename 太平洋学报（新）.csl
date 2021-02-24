@@ -339,7 +339,7 @@
           <choose>
           <if variable="translator">
           <group suffix="。">
-          <text variable="archive_location" prefix="[" suffix="] "/>
+          <text variable="archive_location" prefix="[" suffix="]"/>
           <text macro="author" suffix="著，"/>
           <text macro="editor" suffix="主编，"/>
           <text macro="secondAuthor" suffix="："/>
@@ -613,7 +613,7 @@
           <choose>
           <if variable="translator">
           <group suffix="。">
-          <text variable="archive_location" prefix="[" suffix="] "/>
+          <text variable="archive_location" prefix="[" suffix="]"/>
           <text macro="author" suffix="著，"/>
           <text macro="editor" suffix="主编，"/>
           <text macro="secondAuthor" suffix="："/>
