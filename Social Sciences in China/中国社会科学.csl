@@ -226,13 +226,24 @@
       <choose>
         <if position="ibid-with-locator">
           <group delimiter="">
-            <text term="ibid"/>
+            <text term="ibid" suffix=", "/>
             <text macro="locators"/>
             <text variable="locator" suffix="."/>
           </group>
         </if>
         <else-if position="ibid">
           <text term="ibid"/>
+        </else-if>
+        <else-if position="subsequent" type="book">
+          <group suffix="." delimiter="">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" font-style="italic"/>
+            <group>
+             <label variable="page" form="short" prefix=", " suffix=""/>
+             <text variable="locator" suffix=""/>
+            </group>
+          </group>
         </else-if>
         <else>
       <text macro="en-layout"/>
@@ -362,13 +373,24 @@
       <choose>
         <if position="ibid-with-locator">
           <group delimiter="">
-            <text term="ibid"/>
+            <text term="ibid" suffix=", "/>
             <text macro="locators"/>
             <text variable="locator" suffix="."/>
           </group>
         </if>
         <else-if position="ibid">
           <text term="ibid"/>
+        </else-if>
+        <else-if position="subsequent" type="book">
+          <group suffix="." delimiter="">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" font-style="italic"/>
+            <group>
+             <label variable="page" form="short" prefix=", " suffix=""/>
+             <text variable="locator" suffix=""/>
+            </group>
+          </group>
         </else-if>
         <else>
       <text macro="en-layout"/>
