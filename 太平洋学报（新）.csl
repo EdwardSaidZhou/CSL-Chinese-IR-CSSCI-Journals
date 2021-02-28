@@ -242,7 +242,11 @@
         <text variable="container-title" font-style="italic" suffix=", "/>
         <date form="text" variable="issued" suffix=", "/>
         <text variable="URL" suffix=", "/>
-        <date form="text" variable="accessed" prefix="访问时间："/>
+          <date variable="accessed" prefix="访问时间：">
+          <date-part name="year" suffix="年"/>
+          <date-part name="month" form="numeric" suffix="月"/>
+          <date-part name="day" suffix="日"/>
+        </date>
         </group>
       </else-if>
       <else>
@@ -548,7 +552,11 @@
         <text variable="container-title" font-style="italic" suffix=", "/>
         <date form="text" variable="issued" suffix=", "/>
         <text variable="URL" suffix=", "/>
-        <date form="text" variable="accessed" prefix="访问时间："/>
+        <date variable="accessed" prefix="访问时间：">
+          <date-part name="year" suffix="年"/>
+          <date-part name="month" form="numeric" suffix="月"/>
+          <date-part name="day" suffix="日"/>
+        </date>
         </group>
       </else-if>
       <else>
