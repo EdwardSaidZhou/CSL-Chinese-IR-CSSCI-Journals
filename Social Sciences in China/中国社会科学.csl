@@ -168,7 +168,7 @@
         <text variable="title" font-style="italic" suffix=", "/>
         <text variable="publisher-place" suffix=": "/>
         <text variable="publisher" suffix=", "/>
-        <text variable="genre" suffix=" Thesis, "/>
+        <text variable="genre" suffix=" Dissertation, "/>
         <date date-parts="year" form="numeric" variable="issued"/>
         <group>
           <label variable="locator" form="short" prefix=", " suffix=""/>
