@@ -143,19 +143,19 @@
           </group>
         </else-if>
       <else-if type="book" match="any">
-        <names variable="author" suffix=", ">
-        <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
-        </names>
-        <names variable="editor" prefix="" suffix=", ">
-          <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
-          <label form="short" prefix=" "/>
-        </names>
-        <text variable="title" font-style="italic" suffix=", "/>
-        <names variable="translator" suffix=", ">
-          <label form="short" prefix=" " suffix=" "/>
-          <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
-        </names>
-        <text variable="publisher-place" suffix=": "/>
+           <names variable="author" suffix=", ">
+           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
+           </names>
+           <names variable="editor" prefix="" suffix=", ">
+           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
+            <label form="short" prefix=" "/>
+           </names>
+           <text variable="title" font-style="italic"/>
+           <names variable="translator">
+           <label form="short" prefix=" " suffix=" "/>
+           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
+          </names>
+        <text variable="publisher-place" prefix=", " suffix=": "/>
         <text variable="publisher" suffix=", "/>
         <date date-parts="year" form="numeric" variable="issued"/>
         <group>
@@ -172,12 +172,12 @@
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
           <label form="short" prefix=" "/>
         </names>
-        <text variable="container-title" font-style="italic" suffix=", "/>
-        <names variable="translator" suffix=", ">
+        <text variable="container-title" font-style="italic"/>
+        <names variable="translator">
           <label form="short" prefix=" " suffix=" "/>
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
         </names>
-        <text variable="publisher-place" suffix=": "/>
+        <text variable="publisher-place" prefix=", " suffix=": "/>
         <text variable="publisher" suffix=", "/>
         <date date-parts="year" form="numeric" variable="issued" suffix=", "/>
         <group>
@@ -275,7 +275,7 @@
             <text variable="locator" prefix="第" suffix="页"/>
           </group>
         </if>
-        <else-if match="any" position="ibid">
+        <else-if position="ibid">
           <group delimiter="，">
           <text term="ibid"/>
           </group>
@@ -443,12 +443,12 @@
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
           <label form="short" prefix=" "/>
         </names>
-        <text variable="title" font-style="italic" suffix=", "/>
-        <names variable="translator" suffix=", ">
+        <text variable="title" font-style="italic"/>
+        <names variable="translator">
           <label form="short" prefix=" " suffix=" "/>
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
         </names>
-        <text variable="publisher-place" suffix=": "/>
+        <text variable="publisher-place" prefix=", " suffix=": "/>
         <text variable="publisher" suffix=", "/>
         <date date-parts="year" form="numeric" variable="issued"/>
         <group>
@@ -465,12 +465,12 @@
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
           <label form="short" prefix=" "/>
         </names>
-        <text variable="container-title" font-style="italic" suffix=", "/>
-        <names variable="translator" suffix=", ">
+        <text variable="container-title" font-style="italic"/>
+        <names variable="translator">
           <label form="short" prefix=" " suffix=" "/>
           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
         </names>
-        <text variable="publisher-place" suffix=": "/>
+        <text variable="publisher-place" prefix=", " suffix=": "/>
         <text variable="publisher" suffix=", "/>
         <date date-parts="year" form="numeric" variable="issued" suffix=", "/>
         <group>
