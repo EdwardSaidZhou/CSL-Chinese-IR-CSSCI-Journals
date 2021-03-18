@@ -131,6 +131,70 @@
         <else-if position="ibid">
           <text term="ibid"/>
         </else-if>
+        <else-if position="subsequent" type="book">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" font-style="italic"/>
+            <group>
+             <label variable="page" form="short" prefix=", " suffix=""/>
+             <text variable="locator" suffix=""/>
+          </group>
+        </else-if>
+        <else-if position="subsequent" type="thesis">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" font-style="italic"/>
+            <group>
+             <label variable="page" form="short" prefix=", " suffix=""/>
+             <text variable="locator" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="article">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="article-journal">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="article-magazine">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="paper-conference">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="chapter">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <text variable="container-title"/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
       <else-if type="book" match="any">
         <names variable="author" suffix=", ">
         <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
@@ -259,6 +323,15 @@
         <else-if match="any" position="ibid">
           <group delimiter="，">
           <text term="ibid"/>
+          </group>
+        </else-if>
+        <else-if position="subsequent">
+          <group delimiter="">
+            <text macro="author" suffix="："/>
+            <text macro="editor" prefix="" suffix="主编："/>
+            <text variable="title" prefix="《" suffix="》"/>
+            <text macro="locators-zh"/>
+            <text variable="locator" prefix="，第" suffix="页"/>
           </group>
         </else-if>
         <else-if type="article article-journal article-magazine" match="any">
@@ -403,6 +476,70 @@
         <else-if position="ibid">
           <text term="ibid"/>
         </else-if>
+        <else-if position="subsequent" type="book">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" font-style="italic"/>
+            <group>
+             <label variable="page" form="short" prefix=", " suffix=""/>
+             <text variable="locator" suffix=""/>
+          </group>
+        </else-if>
+        <else-if position="subsequent" type="thesis">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" font-style="italic"/>
+            <group>
+             <label variable="page" form="short" prefix=", " suffix=""/>
+             <text variable="locator" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="article">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="article-journal">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="article-magazine">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="paper-conference">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
+        <else-if position="subsequent" type="chapter">
+            <text macro="author" suffix=", "/>
+            <text macro="editor" suffix=", "/>
+            <text variable="title" prefix="“" suffix=",” "/>
+            <text variable="container-title"/>
+            <group>
+              <label variable="page" form="short" prefix="" suffix=""/>
+              <text variable="page" suffix=""/>
+            </group>
+        </else-if>
       <else-if type="book" match="any">
         <names variable="author" suffix=", ">
         <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
@@ -531,6 +668,15 @@
         <else-if match="any" position="ibid">
           <group delimiter="，">
           <text term="ibid"/>
+          </group>
+        </else-if>
+        <else-if position="subsequent">
+          <group delimiter="">
+            <text macro="author" suffix="："/>
+            <text macro="editor" prefix="" suffix="主编："/>
+            <text variable="title" prefix="《" suffix="》"/>
+            <text macro="locators-zh"/>
+            <text variable="locator" prefix="，第" suffix="页"/>
           </group>
         </else-if>
         <else-if type="article article-journal article-magazine" match="any">
