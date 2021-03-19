@@ -176,6 +176,19 @@
         </group>
       </else-if>
       <else-if type="article article-journal article-magazine" match="any">
+       <choose>
+       <if variable="locator">
+        <text variable="title" prefix="“" suffix=",” "/>
+        <text variable="container-title" font-style="italic" suffix=", "/>
+        <text variable="volume" prefix="vol. " suffix=", "/>
+        <text variable="issue" prefix="no. " suffix=" "/>
+        <date date-parts="year-month" form="text" variable="issued" prefix="(" suffix=")"/>
+        <group>
+          <label variable="locator" form="short" prefix=", " suffix=""/>
+          <text variable="locator" suffix=""/>
+        </group>
+       </if>
+       <else>
         <text variable="title" prefix="“" suffix=",” "/>
         <text variable="container-title" font-style="italic" suffix=", "/>
         <text variable="volume" prefix="vol. " suffix=", "/>
@@ -185,6 +198,8 @@
           <label variable="page" form="short" prefix=", " suffix=""/>
           <text variable="page" suffix=""/>
         </group>
+       </else>
+       </choose>
       </else-if>
       <else>
           <text macro="author" suffix=""/>
