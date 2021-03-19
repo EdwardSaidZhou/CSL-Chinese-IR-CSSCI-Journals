@@ -149,32 +149,23 @@
              <text variable="locator" suffix=""/>
             </group>
         </else-if>
-        <else-if position="subsequent" type="article">
-            <text macro="author" suffix=", "/>
+        <else-if position="subsequent" type="article article-journal article-magazine">
+         <choose>
+         <if variable="locator">
+           <text macro="author" suffix=", "/>
             <text macro="editor" suffix=", "/>
             <text variable="title" prefix="“" suffix=",” "/>
             <group>
-              <label variable="page" form="short" prefix="" suffix=""/>
-              <text variable="page" suffix=""/>
+             <label variable="page" form="short" prefix="" suffix=""/>
+             <text variable="locator" suffix=""/>
             </group>
-        </else-if>
-        <else-if position="subsequent" type="article-journal">
+         </if>
+         <else>
             <text macro="author" suffix=", "/>
             <text macro="editor" suffix=", "/>
-            <text variable="title" prefix="“" suffix=",” "/>
-            <group>
-              <label variable="page" form="short" prefix="" suffix=""/>
-              <text variable="page" suffix=""/>
-            </group>
-        </else-if>
-        <else-if position="subsequent" type="article-magazine">
-            <text macro="author" suffix=", "/>
-            <text macro="editor" suffix=", "/>
-            <text variable="title" prefix="“" suffix=",” "/>
-            <group>
-              <label variable="page" form="short" prefix="" suffix=""/>
-              <text variable="page" suffix=""/>
-            </group>
+            <text variable="title" prefix="“" suffix="”"/>
+         </else>
+         </choose>
         </else-if>
         <else-if position="subsequent" type="paper-conference">
             <text macro="author" suffix=", "/>
