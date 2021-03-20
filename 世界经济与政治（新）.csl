@@ -29,6 +29,10 @@
         <single>p.</single>
         <multiple>pp.</multiple>
       </term>
+      <term name="page" form="short">
+        <single>p.</single>
+        <multiple>pp.</multiple>
+      </term>
       <date form="text">
         <date-part name="month" suffix=" "/>
         <date-part name="day" suffix=", "/>
@@ -124,8 +128,10 @@
       <if position="ibid-with-locator">
           <group delimiter="">
             <text term="ibid" suffix=", "/>
-            <text macro="locators"/>
-            <text variable="locator" suffix="."/>
+            <group>
+             <label variable="page" form="short" prefix="" suffix=""/>
+             <text variable="locator" suffix=""/>
+            </group>
           </group>
         </if>
         <else-if position="ibid">
@@ -133,11 +139,16 @@
         </else-if>
         <else-if position="subsequent" type="book">
           <group delimiter="">
-            <text macro="author" suffix=", "/>
-            <text macro="editor" suffix=", "/>
+            <names variable="author" suffix=", ">
+           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
+           </names>
+           <names variable="editor" prefix="" suffix=", ">
+           <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
+            <label form="short" prefix=" "/>
+           </names>
             <text variable="title" font-style="italic"/>
             <group>
-             <label variable="page" form="short" prefix=", " suffix=""/>
+             <label variable="locator" form="short" prefix=", " suffix=""/>
              <text variable="locator" suffix=""/>
             </group>
           </group>
@@ -159,7 +170,7 @@
         <text variable="publisher" suffix=", "/>
         <date date-parts="year" form="numeric" variable="issued"/>
         <group>
-          <label variable="page" form="short" prefix=", " suffix=""/>
+          <label variable="locator" form="short" prefix=", " suffix=""/>
           <text variable="locator" suffix=""/>
         </group>
       </else-if>
@@ -446,28 +457,7 @@
     </sort>
     <layout locale="en English en-GB en-gb en-us en-US eng" suffix="." delimiter="; ">
     <choose>
-      <if position="ibid-with-locator">
-          <group delimiter="">
-            <text term="ibid" suffix=", "/>
-            <text macro="locators"/>
-            <text variable="locator" suffix="."/>
-          </group>
-        </if>
-        <else-if position="ibid">
-          <text term="ibid"/>
-        </else-if>
-        <else-if position="subsequent" type="book">
-          <group delimiter="">
-            <text macro="author" suffix=", "/>
-            <text macro="editor" suffix=", "/>
-            <text variable="title" font-style="italic"/>
-            <group>
-             <label variable="page" form="short" prefix=", " suffix=""/>
-             <text variable="locator" suffix=""/>
-            </group>
-          </group>
-        </else-if>
-      <else-if type="book" match="any">
+      <if type="book" match="any">
         <names variable="author" suffix=", ">
         <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
         </names>
@@ -487,7 +477,7 @@
           <label variable="page" form="short" prefix=", " suffix=""/>
           <text variable="locator" suffix=""/>
         </group>
-      </else-if>
+      </if>
       <else-if type="chapter" match="any">
         <names variable="author" suffix=", ">
         <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
@@ -593,28 +583,7 @@
     </layout>
      <layout suffix="。" delimiter="；">
       <choose>
-        <if position="ibid-with-locator">
-          <group delimiter="，">
-            <text term="ibid"/>
-            <text macro="locators-zh"/>
-            <text variable="locator" prefix="第" suffix="页"/>
-          </group>
-        </if>
-        <else-if match="any" position="ibid">
-          <group delimiter="，">
-          <text term="ibid"/>
-          </group>
-        </else-if>
-        <else-if position="subsequent" type="book">
-          <group delimiter="">
-            <text macro="author" suffix="："/>
-            <text macro="editor" prefix="" suffix="主编："/>
-            <text variable="title" prefix="《" suffix="》"/>
-            <text macro="locators-zh"/>
-            <text variable="locator" prefix="，第" suffix="页"/>
-          </group>
-        </else-if> 
-        <else-if type="article article-journal article-magazine" match="any">
+        <if type="article article-journal article-magazine" match="any">
           <text macro="author"/>
           <text macro="secondAuthor" prefix="，"/>
           <text variable="title" prefix="：《" suffix="》，"/>
@@ -622,7 +591,7 @@
           <date date-parts="year" form="text" variable="issued"/>
           <text variable="issue" prefix="第" suffix="期"/>
           <text variable="page" prefix="，第" suffix="页"/>
-        </else-if>
+        </if>
         <else-if type="article-newspaper" match="any">
           <text macro="author" suffix="："/>
           <text macro="secondAuthor" prefix="，"/>
