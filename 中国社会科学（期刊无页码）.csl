@@ -334,16 +334,18 @@
                     <if variable="locator">
                         <text variable="title" prefix="《" suffix="》，"/>
                         <text macro="editor" prefix="" suffix="编："/>
-                        <text variable="container-title" prefix="《" suffix="》"/>
                         <group delimiter="，">
-                            <text variable="collection-number" prefix="第" suffix="册"/>
-                            <text variable="edition"/>
-                            <text variable="volume" prefix="第" suffix="卷"/>
-                        </group>
-                        <text macro="secondAuthor" prefix="，"/>
-                        <group delimiter="：">
-                            <text variable="publisher-place" prefix="，"/>
-                            <text variable="publisher"/>
+                            <group>
+                                <text variable="container-title" prefix="《" suffix="》"/>
+                                <text variable="collection-number" prefix="第" suffix="册"/>
+                                <text variable="edition"/>
+                                <text variable="volume" prefix="第" suffix="卷"/>
+                            </group>
+                            <text macro="secondAuthor"/>
+                            <group delimiter="：">
+                                <text variable="publisher-place"/>
+                                <text variable="publisher"/>
+                            </group>
                         </group>
                         <text macro="date" prefix="，"/>
                         <text macro="locators-zh"/>
@@ -352,16 +354,18 @@
                     <else>
                         <text variable="title" prefix="《" suffix="》，"/>
                         <text macro="editor" prefix="" suffix="编："/>
-                        <text variable="container-title" prefix="《" suffix="》"/>
                         <group delimiter="，">
-                            <text variable="collection-number" prefix="第" suffix="册"/>
-                            <text variable="edition"/>
-                            <text variable="volume" prefix="第" suffix="卷"/>
-                        </group>
-                        <text macro="secondAuthor" prefix="，"/>
-                        <group delimiter="：">
-                            <text variable="publisher-place" prefix="，"/>
-                            <text variable="publisher"/>
+                            <group>
+                                <text variable="container-title" prefix="《" suffix="》"/>
+                                <text variable="collection-number" prefix="第" suffix="册"/>
+                                <text variable="edition"/>
+                                <text variable="volume" prefix="第" suffix="卷"/>
+                            </group>
+                            <text macro="secondAuthor"/>
+                            <group delimiter="：">
+                                <text variable="publisher-place"/>
+                                <text variable="publisher"/>
+                            </group>
                         </group>
                         <text macro="date" prefix="，"/>
                         <text variable="page" prefix="，第" suffix="页"/>
@@ -417,16 +421,18 @@
             <else-if type="book" match="any">
                 <text macro="author" suffix="："/>
                 <text macro="editor" suffix="主编："/>
-                <text variable="title" prefix="《" suffix="》"/>
                 <group delimiter="，">
-                    <text variable="collection-number" prefix="第" suffix="册"/>
-                    <text variable="edition"/>
-                    <text variable="volume" prefix="第" suffix="卷"/>
-                </group>
-                <text macro="secondAuthor" prefix="，"/>
-                <group delimiter="：">
-                    <text variable="publisher-place" prefix="，"/>
-                    <text variable="publisher"/>
+                    <group>
+                        <text variable="title" prefix="《" suffix="》"/>
+                        <text variable="collection-number" prefix="第" suffix="册"/>
+                        <text variable="edition"/>
+                        <text variable="volume" prefix="第" suffix="卷"/>
+                    </group>
+                    <text macro="secondAuthor"/>
+                    <group delimiter="：">
+                        <text variable="publisher-place"/>
+                        <text variable="publisher"/>
+                    </group>
                 </group>
                 <text macro="date" prefix="，"/>
                 <text macro="locators-zh"/>
