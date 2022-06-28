@@ -259,8 +259,8 @@
                         <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
                             <text variable="container-title" font-style="italic"/>
-                            <text variable="volume" prefix="vol. "/>
-                            <text variable="issue" prefix="no. " suffix=" "/>
+                            <text variable="volume" prefix="Vol. "/>
+                            <text variable="issue" prefix="No. " suffix=" "/>
                             <date date-parts="year" form="numeric" variable="issued"/>
                         </group>
                         <group>
