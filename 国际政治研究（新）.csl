@@ -2,7 +2,7 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" delimiter-precedes-last="never" et-al-min="4" et-al-use-first="1" sort-separator="; " page-range-format="expanded" demote-non-dropping-particle="sort-only" default-locale="zh-CN">
     <info>
         <title>国际政治研究</title>
-        <id>http://www.zotero.org/styles/gjzzyj</id>
+        <id>http://www.zotero.org/styles/the-journal-of-international-studies-chinese</id>
         <author>
             <name>edward zhou</name>
             <email>edwardzhoujiaxi@gmail.com</email>
@@ -12,12 +12,13 @@
         <category field="chinese humanities"/>
         <summary>根据fanzhen《历史研究》引文规范、pulipuli制作的APA中文格式以及《国际政治研究》引文规范改制，具体用法和特性见说明</summary>
         <published>2021-02-18</published>
-        <updated>2021-06-25</updated>
+        <updated>2022-10-30</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
 
     <!--西文编者、译者、页码以及日期设定-->
     <locale xml:lang="en">
+        <style-options punctuation-in-quote="true"/>
         <terms>
             <term name="editor" form="short">
                 <single>ed.</single>
@@ -45,6 +46,7 @@
 
     <!--中文相同文献、页码设置、出版时间空缺设定-->
     <locale xml:lang="zh">
+        <style-options punctuation-in-quote="true"/>
         <terms>
             <term name="ibid">同上</term>
             <term name="page" form="short"/>
@@ -143,8 +145,8 @@
             <else-if type="chapter" match="any"> <!--西文章节-->
                 <choose>
                     <if variable="locator"> <!--如果有自定义页码，调用-->
-                        <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
+                            <text variable="title" quotes="true"/>
                             <names variable="editor" prefix="in ">
                                 <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                                 <label form="short" prefix=" "/>
@@ -166,8 +168,8 @@
                         </group>
                     </if>
                     <else> <!--无自定义页码，输出原本页码-->
-                        <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
+                            <text variable="title" quotes="true"/>
                             <names variable="editor" prefix="in ">
                                 <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                                 <label form="short" prefix=" "/>
@@ -191,7 +193,7 @@
                 </choose>
             </else-if>
             <else-if type="webpage" match="any"> <!--西文网页-->
-                <text variable="title" prefix="“" suffix=",” "/>
+                <text variable="title" quotes="true" suffix=", "/>
                 <text variable="container-title" font-style="italic" suffix=", "/>
                 <date form="text" variable="issued" suffix=", "/>
                 <text variable="URL" suffix=""/>
@@ -204,8 +206,8 @@
             <else-if type="paper-conference" match="any"> <!--西文会议论文-->
                 <choose>
                     <if variable="locator"> <!--如果有自定义页码，调用-->
-                        <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
+                            <text variable="title" quotes="true"/>
                             <text variable="event"/>
                             <text variable="event-place"/>
                         </group>
@@ -216,8 +218,8 @@
                         </group>
                     </if>
                     <else> <!--无自定义页码，输出原本页码-->
-                        <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
+                            <text variable="title" quotes="true"/>
                             <text variable="event"/>
                             <text variable="event-place"/>
                         </group>
@@ -243,8 +245,8 @@
             <else-if type="article article-journal article-magazine" match="any"> <!--西文期刊-->
                 <choose>
                     <if variable="locator"> <!--如果有自定义页码，调用-->
-                        <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
+                            <text variable="title" quotes="true"/>
                             <text variable="container-title" font-style="italic"/>
                             <text variable="volume" prefix="Vol. "/>
                             <text variable="issue" prefix="No. " suffix=" "/>
@@ -256,8 +258,8 @@
                         </group>
                     </if>
                     <else> <!--无自定义页码，输出原本页码-->
-                        <text variable="title" prefix="“" suffix=",” "/>
                         <group delimiter=", ">
+                            <text variable="title" quotes="true"/>
                             <text variable="container-title" font-style="italic"/>
                             <text variable="volume" prefix="Vol. "/>
                             <text variable="issue" prefix="No. " suffix=" "/>
@@ -272,17 +274,17 @@
             </else-if>
             <else> <!--西文其他类型文献-->
                 <choose>
-                    <if variable="locator">
+                     <if variable="locator">
                         <names variable="editor" prefix="" suffix=", ">
                             <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                             <label form="short" prefix=" "/>
                         </names>
-                        <text variable="title" font-style="italic"/>
+                        <text variable="title" font-style="italic" suffix=", "/>
                         <names variable="translator">
                             <label form="short" prefix=" " suffix=" "/>
                             <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                         </names>
-                        <text variable="publisher-place" prefix=", " suffix=": "/>
+                        <text variable="publisher-place" suffix=": "/>
                         <text variable="publisher" suffix=", "/>
                         <text variable="archive" suffix=", "/>
                         <text variable="archive_location" suffix=", "/>
@@ -297,12 +299,12 @@
                             <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                             <label form="short" prefix=" "/>
                         </names>
-                        <text variable="title" font-style="italic"/>
+                        <text variable="title" font-style="italic" suffix=", "/>
                         <names variable="translator">
                             <label form="short" prefix=" " suffix=" "/>
                             <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                         </names>
-                        <text variable="publisher-place" prefix=", " suffix=": "/>
+                        <text variable="publisher-place" suffix=": "/>
                         <text variable="publisher" suffix=", "/>
                         <text variable="archive" suffix=", "/>
                         <text variable="archive_location" suffix=", "/>
@@ -359,14 +361,10 @@
                 <group delimiter="，">
                     <text macro="secondAuthor"/>
                     <text variable="title" prefix="《" suffix="》"/>
-                    <text variable="container-title" prefix="《" suffix="》"/>
+                    <text variable="container-title" prefix="《" suffix="》，"/>
                 </group>
-                <text variable="publisher-place" prefix="（" suffix="）"/>
-                <text variable="edition"/>
                 <date form="text" variable="issued"/>
-                <text variable="section"/>
-                <text macro="locators-zh"/>
-                <text variable="locator" prefix="，第" suffix="页"/>
+                <text variable="edition" prefix="，第" suffix="版"/>
             </else-if>
             <else-if type="chapter" match="any"> <!--中文章节-->
                 <text macro="author" suffix="："/>
@@ -513,20 +511,20 @@
             <else> <!--中文其他类型文献-->
                 <text macro="author" suffix="："/>
                 <text macro="editor" suffix="主编："/>
-                <text variable="title" prefix="《" suffix="》"/>
-                <group delimiter="，">
+                <group delimiter="，" suffix="，">
+                    <text variable="title" prefix="《" suffix="》"/>
                     <text variable="collection-number" prefix="第" suffix="册"/>
                     <text variable="edition"/>
                     <text variable="volume" prefix="第" suffix="卷"/>
                 </group>
                 <text macro="secondAuthor" prefix="，"/>
-                <group delimiter="：">
-                    <text variable="publisher-place" prefix="，"/>
+                <group delimiter="：" suffix="，">
+                    <text variable="publisher-place"/>
                     <text variable="publisher"/>
                     <text variable="archive"/>
                     <text variable="archive_location"/>
                 </group>
-                <text macro="date" prefix="，"/>
+                <text macro="date"/>
                 <text macro="locators-zh"/>
                 <text variable="locator" prefix="，第" suffix="页"/>
             </else>
@@ -586,7 +584,7 @@
                                 <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                                 <label form="short" prefix=" "/>
                             </names>
-                            <text variable="title" prefix="“" suffix=",” "/>
+                            <text variable="title" quotes="true" suffix=", "/>
                             <group>
                                 <label variable="locator" form="short"/>
                                 <text variable="locator" suffix=""/>
@@ -600,7 +598,7 @@
                                 <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                                 <label form="short" prefix=" "/>
                             </names>
-                            <text variable="title" prefix="“" suffix="”"/>
+                            <text variable="title" quotes="true" suffix="."/>
                         </else>
                     </choose>
                 </else-if>
@@ -612,7 +610,7 @@
                         <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                         <label form="short" prefix=" "/>
                     </names>
-                    <text variable="title" prefix="“" suffix=",” "/>
+                    <text variable="title" quotes="true" suffix=", "/>
                     <group>
                         <label variable="page" form="short"/>
                         <text variable="page" suffix=""/>
@@ -622,7 +620,7 @@
                     <names variable="author" suffix=", ">
                         <name and="text" et-al-min="4" et-al-use-first="1" sort-separator=""/>
                     </names>
-                    <text variable="title" prefix="“" suffix=",” "/>
+                    <text variable="title" quotes="true" suffix=", "/>
                     <group>
                         <label variable="page" form="short"/>
                         <text variable="page" suffix=""/>
@@ -646,13 +644,10 @@
                     <text term="ibid"/>
                 </else-if> 
                 <else-if position="subsequent"> <!--相同文献引用省略出版信息-->
-                    <group delimiter="">
-                        <text macro="author" suffix="："/>
-                        <text macro="editor" prefix="" suffix="主编："/>
-                        <text variable="title" prefix="《" suffix="》"/>
-                        <text macro="locators-zh"/>
-                        <text variable="locator" prefix="，第" suffix="页"/>
-                    </group>
+                    <text macro="author"/>
+                    <text variable="title" prefix="《" suffix="》"/>
+                    <text macro="locators-zh"/>
+                    <text variable="locator" prefix="，第" suffix="页"/>
                 </else-if>
                 <else>
                     <text macro="zh-layout"/>
