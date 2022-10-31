@@ -364,6 +364,7 @@
             <else-if type="chapter" match="any"> <!--中文章节-->
                 <choose>
                     <if variable="translator" match="any"> <!--中文译本编著-->
+                        <text variable="archive_location" prefix="[" suffix="]"/>
                         <text macro="author" suffix="："/>
                         <choose>
                             <if variable="locator"> <!--如果有自定义页码，调用-->
@@ -487,6 +488,7 @@
             <else-if type="book" match="any"> <!--中文书籍-->
                 <choose>
                     <if variable="translator" match="any"> <!--中文译著-->
+                        <text variable="archive_location" prefix="[" suffix="]"/>
                         <text macro="author" suffix="著，"/>
                         <text macro="editor" suffix="主编，"/>
                         <text macro="secondAuthor" suffix="："/>
@@ -504,7 +506,7 @@
                         <text variable="locator" prefix="，第" suffix="页"/>
                     </if>
                     <else> <!--中文书籍-->
-                        <text macro="author" suffix="："/>
+                        <text macro="author" suffix="著："/>
                         <text macro="editor" suffix="主编："/>
                         <group delimiter="，">
                             <group>
