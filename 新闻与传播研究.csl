@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" delimiter-precedes-last="never" et-al-min="4" et-al-use-first="1" sort-separator="; " page-range-format="expanded" demote-non-dropping-particle="sort-only" default-locale="zh-CN">
     <info>
-        <title>国际政治研究</title>
-        <id>http://www.zotero.org/styles/the-journal-of-international-studies-chinese</id>
+        <title>新闻与传播研究</title>
+        <id>http://www.zotero.org/styles/xcyj</id>
         <author>
             <name>edward zhou</name>
             <email>edwardzhoujiaxi@gmail.com</email>
@@ -10,9 +10,9 @@
         <category citation-format="note"/>
         <category field="chinese social science"/>
         <category field="chinese humanities"/>
-        <summary>根据fanzhen《历史研究》引文规范、pulipuli制作的APA中文格式以及《国际政治研究》引文规范改制，具体用法和特性见说明</summary>
+        <summary>根据fanzhen《历史研究》引文规范、pulipuli制作的APA中文格式以及《新闻与传播研究》引文规范改制，具体用法和特性见说明</summary>
         <published>2021-02-18</published>
-        <updated>2022-10-30</updated>
+        <updated>2022-11-04</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
 
@@ -324,7 +324,7 @@
     <macro name="zh-layout">
         <choose>
             <if type="article article-journal article-magazine" match="any"> <!--中文期刊-->
-                <choose>
+                <choose> <!--中文期刊-->
                     <if variable="locator"> <!--如果有自定义页码，调用-->
                         <text macro="author"/>
                         <text macro="secondAuthor"/>
@@ -336,9 +336,9 @@
                         <date date-parts="year" form="text" variable="issued"/>
                         <group delimiter="，">
                             <text variable="issue" prefix="第" suffix="期"/>
+                            <text macro="locators-zh"/>
+                            <text variable="locator" prefix="第" suffix="页"/>
                         </group>
-                        <text macro="locators-zh"/>
-                        <text variable="locator" prefix="，第" suffix="页"/>
                     </if>
                     <else> <!--无自定义页码，输出原本页码-->
                         <text macro="author"/>
@@ -351,8 +351,8 @@
                         <date date-parts="year" form="text" variable="issued"/>
                         <group delimiter="，">
                             <text variable="issue" prefix="第" suffix="期"/>
+                            <text variable="page" prefix="第" suffix="页"/>
                         </group>
-                        <text variable="page" prefix="，第" suffix="页"/>
                     </else>
                 </choose>
             </if>
@@ -385,8 +385,8 @@
                                 <text variable="publisher-place"/>
                                 <text variable="publisher"/>
                             </group>
+                            <text macro="date" suffix=""/>
                         </group>
-                        <text macro="date" suffix="版"/>
                         <text macro="locators-zh"/>
                         <text variable="locator" prefix="，第" suffix="页"/>
                     </if>
@@ -406,8 +406,8 @@
                                 <text variable="publisher-place"/>
                                 <text variable="publisher"/>
                             </group>
+                            <text macro="date" suffix=""/>
                         </group>
-                        <text macro="date" suffix="版"/>
                         <text variable="page" prefix="，第" suffix="页"/>
                     </else>
                 </choose>
@@ -419,12 +419,8 @@
                     <text variable="container-title"/>
                     <date form="text" variable="issued"/>
                     <text variable="URL" prefix=" "/>
+                    <date form="text" variable="accessed" suffix=""/>
                 </group>
-                <date variable="accessed" prefix="，">
-                    <date-part name="year" suffix="-"/>
-                    <date-part name="month" form="numeric" suffix="-"/>
-                    <date-part name="day"/>
-                </date>
             </else-if>
             <else-if type="paper-conference" match="any"> <!--中文会议论文-->
                 <text macro="author" suffix="："/>
@@ -455,10 +451,8 @@
                 <text macro="secondAuthor" prefix="，"/>
                 <group delimiter="，">
                     <text variable="title" prefix="：《" suffix="》"/>
+                    <text variable="genre" suffix="学位论文"/> <!--文献管理软件中仅需要输入学位类型即可-->
                     <text variable="publisher"/>
-                </group>
-                <group delimiter="，">
-                    <text variable="genre" suffix="论文"/> <!--文献管理软件中仅需要输入学位类型即可-->
                     <date date-parts="year" form="text" variable="issued"/>
                 </group>
                 <text macro="locators-zh"/>
@@ -482,8 +476,8 @@
                                 <text variable="publisher-place"/>
                                 <text variable="publisher"/>
                             </group>
+                            <text macro="date" suffix=""/>
                         </group>
-                        <text macro="date" suffix="版"/>
                         <text macro="locators-zh"/>
                         <text variable="locator" prefix="，第" suffix="页"/>
                     </if>
@@ -501,8 +495,8 @@
                                 <text variable="publisher-place"/>
                                 <text variable="publisher"/>
                             </group>
+                            <text macro="date" suffix=""/>
                         </group>
-                        <text macro="date" suffix="版"/>
                         <text macro="locators-zh"/>
                         <text variable="locator" prefix="，第" suffix="页"/>
                     </else>
