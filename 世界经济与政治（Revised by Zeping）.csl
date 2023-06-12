@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" et-al-min="4" et-al-use-first="1" initialize="false" initialize-with=". " page-range-format="expanded" default-locale="en-US">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" et-al-min="4" et-al-use-first="1" initialize="false" initialize-with=". " page-range-format="expanded" default-locale="en-US" default-locale-sort="zh-CN">
   <info>
     <title>世界经济与政治</title>
     <id>http://www.zotero.org/styles/journal-of-world-economics-and-politics</id>
@@ -15,8 +15,8 @@
       <email>zepinglee@gmail.com</email>
     </contributor>
     <category citation-format="note"/>
-    <category field="social_science"/>
     <category field="political_science"/>
+    <category field="social_science"/>
     <updated>2022-11-04T20:06:00+08:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
@@ -40,6 +40,7 @@
       <term name="close-inner-quote">’</term>
       <!-- 中文页码的连接号使用一字线（em dash） -->
       <term name="page-range-delimiter">&#8212;</term>
+      <term name="author" form="short">著</term>
       <term name="editor" form="short">主编</term>
       <term name="compiler" form="short">整理</term>
     </terms>
@@ -50,21 +51,67 @@
     </terms>
   </locale>
   <macro name="author-en">
-    <names variable="author compiler translator" delimiter=", ">
+    <names variable="author" delimiter=", ">
       <name and="text"/>
       <label form="short" prefix=", "/>
       <substitute>
-        <names variable="editor"/>
+        <names variable="compiler"/>
+        <choose>
+          <if variable="container-title" match="none">
+            <names variable="editor"/>
+          </if>
+        </choose>
       </substitute>
     </names>
   </macro>
   <macro name="author-zh">
-    <names variable="author compiler translator" delimiter="，">
+    <choose>
+      <if variable="translator">
+        <!-- 译著需要显示“著” -->
+        <names variable="author">
+          <name delimiter="、"/>
+          <label form="short"/>
+          <substitute>
+            <names variable="compiler"/>
+            <choose>
+              <if variable="container-title" match="none">
+                <names variable="editor"/>
+              </if>
+            </choose>
+          </substitute>
+        </names>
+      </if>
+      <else>
+        <names variable="author">
+          <name delimiter="、"/>
+          <substitute>
+            <names variable="compiler">
+              <name delimiter="、"/>
+              <label form="short"/>
+            </names>
+            <choose>
+              <if variable="container-title" match="none">
+                <names variable="editor">
+                  <name delimiter="、"/>
+                  <label form="short"/>
+                </names>
+              </if>
+            </choose>
+          </substitute>
+        </names>
+      </else>
+    </choose>
+  </macro>
+  <macro name="secondary-contributors-en">
+    <names variable="translator">
+      <name and="text"/>
+      <label form="short" prefix=", "/>
+    </names>
+  </macro>
+  <macro name="secondary-contributors-zh">
+    <names variable="translator">
       <name delimiter="、"/>
       <label form="short"/>
-      <substitute>
-        <names variable="editor"/>
-      </substitute>
     </names>
   </macro>
   <macro name="volume-en">
@@ -283,7 +330,7 @@
   <macro name="event-en">
     <choose>
       <if variable="container-title" match="none">
-        <group delimiter="，">
+        <group delimiter=", ">
           <group delimiter=" ">
             <text value="Paper Prepared for"/>
             <text variable="event-title"/>
@@ -500,10 +547,11 @@
   <macro name="source-en">
     <group delimiter=", ">
       <text macro="author-en"/>
+      <text macro="secondary-contributors-en"/>
       <text macro="title-en"/>
       <choose>
         <if type="article-journal article-magazine article-newspaper" match="any">
-          <group delimiter=" ">
+          <group delimiter=", ">
             <text macro="container-periodical-en"/>
             <text macro="date-en"/>
           </group>
@@ -543,7 +591,10 @@
   </macro>
   <macro name="source-zh">
     <group delimiter="：">
-      <text macro="author-zh"/>
+      <group delimiter="，">
+        <text macro="author-zh"/>
+        <text macro="secondary-contributors-zh"/>
+      </group>
       <group delimiter="，">
         <text macro="title-zh"/>
         <choose>
@@ -552,8 +603,10 @@
           </if>
           <else-if type="chapter" match="any">
             <text macro="container-booklike-zh"/>
-            <text macro="publisher-zh"/>
-            <text macro="date-zh"/>
+            <group>
+              <text macro="publisher-zh"/>
+              <text macro="date-zh"/>
+            </group>
           </else-if>
           <else-if type="thesis">
             <group>
@@ -607,7 +660,7 @@
         <text macro="source-en"/>
       </if>
       <else>
-        <group delimiter="：">
+        <group delimiter=": ">
           <group delimiter=", ">
             <text macro="author-en"/>
             <text macro="title-short-en"/>
@@ -638,11 +691,14 @@
     <layout delimiter="。" suffix="。" locale="zh">
       <text macro="entry-layout-zh"/>
     </layout>
-    <layout delimiter="." suffix=". ">
+    <layout delimiter=". " suffix=".">
       <text macro="entry-layout-en"/>
     </layout>
   </citation>
   <bibliography entry-spacing="0" second-field-align="flush">
+    <sort>
+      <key macro="author-en"/>
+    </sort>
     <layout suffix="。" locale="zh">
       <text variable="citation-number" prefix="[" suffix="]"/>
       <text macro="source-zh"/>
