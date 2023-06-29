@@ -323,7 +323,7 @@
           <text macro="issue-zh"/>
         </group>
         <text macro="date-zh"/>
-        <text variable="section" quotes="true"/>
+        <text variable="section"/>
       </group>
     </group>
   </macro>

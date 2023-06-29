@@ -292,6 +292,20 @@
             </if>
         </choose>
     </macro>
+    <macro name="container-newspaper-zh">
+    <group>
+      <text variable="container-title" prefix="《" suffix="》"/>
+      <text variable="publisher-place" prefix="（" suffix="）"/>
+      <group delimiter="，">
+        <group>
+          <text macro="volume-zh"/>
+          <text macro="issue-zh"/>
+        </group>
+        <text macro="date-zh"/>
+        <text variable="section"/>
+      </group>
+    </group>
+  </macro>
     <macro name="publisher-en">
         <choose>
             <if type="report">
@@ -562,7 +576,7 @@
       <group delimiter="，">
         <text macro="title-zh"/>
         <choose>
-          <if type="article-journal article-magazine article-newspaper" match="any">
+          <if type="article-journal article-magazine" match="any">
             <text macro="container-periodical-zh"/>
           </if>
           <else-if type="chapter" match="any">
@@ -570,6 +584,9 @@
             <text macro="secondary-contributors-zh"/>
             <text macro="publisher-zh"/>
             <text macro="date-zh"/>
+          </else-if>
+          <else-if type="article-newspaper">
+            <text macro="container-newspaper-zh"/>
           </else-if>
           <else-if type="thesis">
             <group delimiter="，">

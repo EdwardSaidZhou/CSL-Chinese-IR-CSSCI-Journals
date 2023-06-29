@@ -292,6 +292,18 @@
             </if>
         </choose>
     </macro>
+    <macro name="container-newspaper-zh">
+    <group>
+      <text variable="container-title" prefix="《" suffix="》"/>
+      <text variable="publisher-place" prefix="（" suffix="）"/>
+        <group>
+          <text macro="volume-zh"/>
+          <text macro="issue-zh"/>
+        </group>
+        <text macro="date-zh"/>
+        <text variable="section"/>
+    </group>
+  </macro>
   <macro name="publisher-en">
     <choose>
       <if type="report">
