@@ -214,7 +214,7 @@
         <choose>
             <if type="article-newspaper collection manuscript personal_communication report"
                 match="any">
-                <date variable="issued" form="text" />
+                <date variable="issued" form="text"/>
             </if>
             <else>
                 <date variable="issued" form="text" date-parts="year" />
@@ -256,7 +256,7 @@
             <text macro="volume-en" />
             <group>
                 <label variable="issue" form="short" text-case="capitalize-first" />
-                <number variable="issue" />
+                <number variable="issue"/>
             </group>
         </group>
     </macro>
@@ -516,9 +516,9 @@
             <text macro="title-en" />
             <choose>
                 <if type="article-journal article-magazine article-newspaper" match="any">
-                    <group delimiter=" ">
+                    <group delimiter=", ">
                         <text macro="container-periodical-en" />
-                        <text macro="date-en" />
+                        <text macro="date-en"/>
                     </group>
                 </if>
                 <else-if type="chapter" match="any">
@@ -572,7 +572,7 @@
             <text macro="date-zh"/>
           </else-if>
           <else-if type="thesis">
-            <group>
+            <group delimiter="，">
               <choose>
                 <if variable="genre">
                   <text variable="genre"/>
@@ -652,10 +652,10 @@
         </choose>
     </macro>
     <citation>
-        <layout delimiter="。" suffix="。" locale="zh">
+        <layout delimiter="；" suffix="。" locale="zh">
             <text macro="entry-layout-zh" />
         </layout>
-        <layout delimiter="." suffix=". ">
+        <layout delimiter="; " suffix=". ">
             <text macro="entry-layout-en" />
         </layout>
     </citation>
