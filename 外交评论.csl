@@ -144,7 +144,7 @@
                     <text variable="title" text-case="title" quotes="true" />
                     <choose>
                         <if variable="genre">
-                            <text variable="genre" text-case="title" />
+                            <text variable="genre" text-case="title" suffix=" Dissertation"/>
                         </if>
                         <else>
                             <text value="Ph.D. Dissertation" />
@@ -592,7 +592,7 @@
             <group delimiter="，">
               <choose>
                 <if variable="genre">
-                  <text variable="genre"/>
+                  <text variable="genre" suffix="学位论文"/>
                 </if>
                 <else>
                   <text value="博士学位论文"/>
