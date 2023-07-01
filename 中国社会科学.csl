@@ -134,7 +134,7 @@
           <text variable="title" text-case="title" quotes="true"/>
           <choose>
             <if variable="genre">
-              <text variable="genre" text-case="title" suffix=" Dissertation"/>
+              <text variable="genre" text-case="title"/>
             </if>
             <else>
               <text value="Ph.D. Dissertation"/>
@@ -188,7 +188,7 @@
           <text variable="title" prefix="《" suffix="》"/>
           <choose>
             <if variable="genre">
-              <text variable="genre" suffix="学位论文"/>
+              <text variable="genre"/>
             </if>
             <else>
               <text value="博士学位论文"/>
@@ -323,7 +323,7 @@
           <text macro="issue-zh"/>
         </group>
         <text macro="date-zh"/>
-        <text variable="section"/>
+        <text variable="section" quotes="true"/>
       </group>
     </group>
   </macro>
@@ -397,7 +397,7 @@
   <macro name="event-en">
     <choose>
       <if variable="container-title" match="none">
-        <group delimiter="，">
+        <group delimiter=", ">
           <group delimiter=" ">
             <text value="Paper Prepared for"/>
             <text variable="event-title"/>
@@ -686,13 +686,11 @@
         <text macro="source-en"/>
       </if>
       <else>
-        <group delimiter="：">
           <group delimiter=", ">
             <text macro="author-en"/>
             <text macro="title-short-en"/>
             <text macro="locator-en"/>
           </group>
-        </group>
       </else>
     </choose>
   </macro>
@@ -703,13 +701,11 @@
       </if>
       <else>
         <!-- 再次引证时的项目简化 -->
-        <group delimiter="：">
           <group delimiter="，">
             <text macro="author-zh"/>
             <text macro="title-short-zh"/>
             <text macro="locator-zh"/>
           </group>
-        </group>
       </else>
     </choose>
   </macro>
@@ -717,7 +713,7 @@
     <layout delimiter="；" suffix="。" locale="zh">
       <text macro="entry-layout-zh"/>
     </layout>
-    <layout delimiter="; " suffix=". ">
+    <layout delimiter="; " suffix=".">
       <text macro="entry-layout-en"/>
     </layout>
   </citation>
