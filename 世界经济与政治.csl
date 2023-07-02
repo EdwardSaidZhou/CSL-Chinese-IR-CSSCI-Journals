@@ -17,7 +17,7 @@
     <category citation-format="note"/>
     <category field="political_science"/>
     <category field="social_science"/>
-    <updated>2022-11-04T20:06:00+08:00</updated>
+    <updated>2023-07-02T19:31:51+08:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -330,7 +330,7 @@
   <macro name="event-en">
     <choose>
       <if variable="container-title" match="none">
-        <group delimiter="，">
+        <group delimiter=", ">
           <group delimiter=" ">
             <text value="Paper Prepared for"/>
             <text variable="event-title"/>
@@ -604,8 +604,8 @@
           <else-if type="chapter" match="any">
             <text macro="container-booklike-zh"/>
             <group>
-            <text macro="publisher-zh"/>
-            <text macro="date-zh"/>
+              <text macro="publisher-zh"/>
+              <text macro="date-zh"/>
             </group>
           </else-if>
           <else-if type="thesis">
@@ -660,12 +660,10 @@
         <text macro="source-en"/>
       </if>
       <else>
-        <group delimiter="：">
-          <group delimiter=", ">
-            <text macro="author-en"/>
-            <text macro="title-short-en"/>
-            <text macro="locator-en"/>
-          </group>
+        <group delimiter=", ">
+          <text macro="author-en"/>
+          <text macro="title-short-en"/>
+          <text macro="locator-en"/>
         </group>
       </else>
     </choose>
@@ -677,12 +675,10 @@
       </if>
       <else>
         <!-- 再次引证时的项目简化 -->
-        <group delimiter="：">
-          <group delimiter="，">
-            <text macro="author-zh"/>
-            <text macro="title-short-zh"/>
-            <text macro="locator-zh"/>
-          </group>
+        <group delimiter="，">
+          <text macro="author-zh"/>
+          <text macro="title-short-zh"/>
+          <text macro="locator-zh"/>
         </group>
       </else>
     </choose>
@@ -691,7 +687,7 @@
     <layout delimiter="；" suffix="。" locale="zh">
       <text macro="entry-layout-zh"/>
     </layout>
-    <layout delimiter="; " suffix=". ">
+    <layout delimiter="; " suffix=".">
       <text macro="entry-layout-en"/>
     </layout>
   </citation>
