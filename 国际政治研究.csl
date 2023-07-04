@@ -237,6 +237,9 @@
                 match="any">
                 <date variable="issued" form="text" />
             </else-if>
+            <else-if type="post post-weblog software webpage" match="any">
+                <date variable="issued" form="text"/>
+            </else-if>
             <else>
                 <date variable="issued" form="text" date-parts="year" />
             </else>

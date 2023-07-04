@@ -245,6 +245,9 @@
       <else-if type="article-newspaper collection manuscript personal_communication" match="any">
         <date variable="issued" form="text"/>
       </else-if>
+      <else-if type="post post-weblog software webpage" match="any">
+        <date variable="issued" form="text"/>
+      </else-if>
       <else>
         <date variable="issued" form="text" date-parts="year"/>
       </else>
@@ -579,6 +582,7 @@
         </else-if>
         <else-if type="post post-weblog software webpage" match="any">
           <text variable="container-title"/>
+          <date variable="issued" form="text"/>
         </else-if>
         <else>
           <text macro="publisher-en"/>
