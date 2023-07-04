@@ -582,7 +582,7 @@
     </group>
   </macro>
   <macro name="source-zh">
-    <text variable="archive_location" prefix="[" suffix="] "/>
+    <text variable="original-publisher-place" prefix="[" suffix="] "/>
     <group delimiter="：">
       <group delimiter="，">
         <text macro="author-zh"/>
