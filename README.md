@@ -1,4 +1,4 @@
-# CSL-Chinese-IR-CSSCI-Journals
+![image](https://github.com/EdwardSaidZhou/CSL-Chinese-IR-CSSCI-Journals/assets/17704749/411e31c2-006f-4ef2-b4ee-66dc83ec1884)# CSL-Chinese-IR-CSSCI-Journals
 中文国关及小部分综合社科期刊CSL
 
 基于pulipuli的中文APA格式以及fanzhen的《历史研究》改进制作
@@ -43,7 +43,13 @@ Zeping重制的《世界经济与政治》修复：作者为“editor”的图�
 **2023-06-30更新：**
 重制《国际政治研究》
 修订《外交评论》《世界经济与政治》《中国社会科学》
+修订国籍使用
 
 **2023-07-04更新：**
 重制《现代国际关系》
 由于《世界经济与政治》《当代亚太》《国际政治科学》已经三刊统一，故删除《当代亚太》
+修订《现代国际关系》《国际政治研究》的国籍信息
+
+**国籍使用：**
+![image](https://github.com/EdwardSaidZhou/CSL-Chinese-IR-CSSCI-Journals/assets/17704749/fffe5265-1850-4f2c-93fd-2ac21cf3a74f)
+以Original Publisher Place变量暂时用作国籍，仅能显示第一位作者的国籍信息，使用方式见上图红圈
