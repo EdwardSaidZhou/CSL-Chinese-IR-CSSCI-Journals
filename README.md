@@ -51,5 +51,6 @@ Zeping重制的《世界经济与政治》修复：作者为“editor”的图�
 修订《现代国际关系》《国际政治研究》的国籍信息
 
 **国籍使用：**
+以Original Publisher Place变量暂时用作国籍，仅能显示第一位作者的国籍信息，使用方式见下图红圈
+
 ![image](https://github.com/EdwardSaidZhou/CSL-Chinese-IR-CSSCI-Journals/assets/17704749/fffe5265-1850-4f2c-93fd-2ac21cf3a74f)
-以Original Publisher Place变量暂时用作国籍，仅能显示第一位作者的国籍信息，使用方式见上图红圈
