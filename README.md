@@ -1,4 +1,4 @@
-![image](https://github.com/EdwardSaidZhou/CSL-Chinese-IR-CSSCI-Journals/assets/17704749/411e31c2-006f-4ef2-b4ee-66dc83ec1884)# CSL-Chinese-IR-CSSCI-Journals
+# CSL-Chinese-IR-CSSCI-Journals
 中文国关及小部分综合社科期刊CSL
 
 基于pulipuli的中文APA格式以及fanzhen的《历史研究》改进制作
