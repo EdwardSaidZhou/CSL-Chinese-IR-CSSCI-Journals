@@ -191,7 +191,7 @@
   </macro>
   <!-- 期刊题名 -->
   <macro name="container-periodical-en">
-    <group delimiter=" ">
+    <group>
       <text variable="container-title" font-style="italic" text-case="title"/>
       <group>
         <choose>
