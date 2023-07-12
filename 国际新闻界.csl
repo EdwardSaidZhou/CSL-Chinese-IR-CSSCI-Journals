@@ -196,7 +196,7 @@
       <group>
         <choose>
           <if is-numeric="volume">
-            <text variable="volume"/>
+            <text variable="volume" prefix=", "/>
           </if>
         </choose>
         <choose>
@@ -211,10 +211,10 @@
     <text variable="container-title" prefix="《" suffix="》"/>
     <choose>
       <if is-numeric="issue">
-        <text variable="issue" prefix="，(" suffix=")"/>
+        <text variable="issue" prefix="，（" suffix="）"/>
       </if>
       <else>
-        <text variable="issue" prefix="，(" suffix=")"/>
+        <text variable="issue" prefix="，（" suffix="）"/>
       </else>
     </choose>
   </macro>
@@ -363,6 +363,7 @@
         <text macro="publisher-en"/>
       </group>
       <text macro="access" prefix=". Retrieved from "/>
+      <text variable="page" prefix=", " />
     </group>
   </macro>
   <macro name="entry-layout-zh">
@@ -387,12 +388,14 @@
         <text macro="author-intext-zh"/>
         <text macro="date"/>
       </group>
+      <text variable="locator" prefix="："/>
     </layout>
     <layout prefix="（" suffix="）" delimiter="；">
       <group delimiter="，">
         <text macro="author-intext-en"/>
         <text macro="date"/>
       </group>
+      <text variable="locator" prefix=": "/>
     </layout>
   </citation>
   <bibliography entry-spacing="0" hanging-indent="true" subsequent-author-substitute="&#8212;&#8212;&#8212;">
