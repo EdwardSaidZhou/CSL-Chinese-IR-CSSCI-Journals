@@ -390,7 +390,7 @@
       </group>
       <text variable="locator" prefix="："/>
     </layout>
-    <layout prefix="（" suffix="）" delimiter="；">
+    <layout prefix="（" suffix="）" delimiter="; ">
       <group delimiter="，">
         <text macro="author-intext-en"/>
         <text macro="date"/>
