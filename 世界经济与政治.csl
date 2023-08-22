@@ -588,7 +588,7 @@
           <text macro="archive-en" />
         </else-if>
         <else-if type="post post-weblog software webpage" match="any">
-          <text variable="container-title" />
+          <text variable="container-title" font-style="italic"/>
           <date variable="issued" form="text" />
         </else-if>
         <else>
@@ -650,7 +650,7 @@
             <text macro="archive-zh" />
           </else-if>
           <else-if type="post post-weblog software webpage" match="any">
-            <text variable="container-title" />
+            <text variable="container-title" font-style="italic"/>
             <text macro="date-zh" />
           </else-if>
           <else>
