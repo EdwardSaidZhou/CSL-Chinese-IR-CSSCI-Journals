@@ -12,7 +12,7 @@
     <category field="chinese humanities"/>
     <summary>根据pulipuli制作的APA中文格式、fanzhen《历史研究》引文规范以及《文艺争鸣》引文规范改制，具体用法和特性见说明</summary>
     <published>2021-02-24</published>
-    <updated>2023-12-03T11:31:32+08:00</updated>
+    <updated>2023-12-03T12:07:25+08:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -268,7 +268,7 @@
           <text variable="title" prefix="“" suffix=",” "/>
           <text variable="event" suffix=", "/>
           <text variable="event-place" suffix=", "/>
-          <date date-parts="year-month-date" form="text" variable="issued" prefix="" suffix=""/>
+          <date date-parts="year-month-day" form="text" variable="issued" prefix="" suffix=""/>
         <group>
           <label variable="page" form="short" prefix=", " suffix=""/>
           <text variable="page" suffix=""/>
@@ -326,7 +326,7 @@
         </names>
         <text variable="title" prefix="“" suffix=",” "/>
         <text variable="container-title" font-style="italic" suffix=", "/>
-        <date date-parts="year-month-date" form="text" variable="issued"/>
+        <date date-parts="year-month-day" form="text" variable="issued"/>
       </else-if>
       <else-if type="post-blog webpage" match="any">
         <names variable="author" suffix=", ">
@@ -346,7 +346,7 @@
         <text macro="author" suffix=""/>
         <text macro="editor" suffix=""/>
         <text variable="title" prefix="" suffix=""/>
-        <date date-parts="year-month-date" form="text" variable="issued" prefix=", " suffix=", "/>
+        <date date-parts="year-month-day" form="text" variable="issued" prefix=", " suffix=", "/>
         <text macro="secondAuthor" prefix=", "/>
         <text variable="publisher-place" prefix=", " suffix=": "/>
         <text variable="publisher"/>
@@ -441,7 +441,7 @@
           <text variable="title" prefix="《" suffix="》，"/>
           <text variable="event" suffix="，"/>
           <text variable="event-place" suffix="，"/>
-          <date date-parts="year-month-date" form="text" variable="issued" prefix="" suffix=""/>
+          <date date-parts="year-month-day" form="text" variable="issued" prefix="" suffix=""/>
           <text macro="locators-zh"/>
           <text variable="locator" prefix="，第" suffix="页"/>
         </else-if>
@@ -489,7 +489,7 @@
           <text macro="editor" suffix="主编"/>
           <text variable="title" prefix="《" suffix="》"/>
           <text macro="secondAuthor"/>
-          <date date-parts="year-month-date" form="text" variable="issued" prefix="，" suffix="，"/>
+          <date date-parts="year-month-day" form="text" variable="issued" prefix="，" suffix="，"/>
           <text variable="edition"/>
           <text variable="volume" prefix="第" suffix="卷"/>
           <text variable="publisher-place" prefix="，" suffix="："/>
@@ -559,7 +559,7 @@
           <text variable="title" prefix="“" suffix=",” "/>
           <text variable="event" suffix=", "/>
           <text variable="event-place" suffix=", "/>
-          <date date-parts="year-month-date" form="text" variable="issued" prefix="" suffix=""/>
+          <date date-parts="year-month-day" form="text" variable="issued" prefix="" suffix=""/>
         <group>
           <label variable="page" form="short" prefix=", " suffix=""/>
           <text variable="page" suffix=""/>
@@ -599,7 +599,7 @@
         </names>
         <text variable="title" prefix="“" suffix=",” "/>
         <text variable="container-title" font-style="italic" suffix=", "/>
-        <date date-parts="year-month-date" form="text" variable="issued"/>
+        <date date-parts="year-month-day" form="text" variable="issued"/>
       </else-if>
       <else-if type="post-blog webpage" match="any">
         <names variable="author" suffix=", ">
@@ -619,7 +619,7 @@
         <text macro="author" suffix=""/>
         <text macro="editor" suffix=""/>
         <text variable="title" prefix="" suffix=""/>
-        <date date-parts="year-month-date" form="text" variable="issued" prefix=", " suffix=", "/>
+        <date date-parts="year-month-day" form="text" variable="issued" prefix=", " suffix=", "/>
         <text macro="secondAuthor" prefix=", "/>
         <text variable="publisher-place" prefix=", " suffix=": "/>
         <text variable="publisher"/>
@@ -714,7 +714,7 @@
           <text variable="title" prefix="《" suffix="》，"/>
           <text variable="event" suffix="，"/>
           <text variable="event-place" suffix="，"/>
-          <date date-parts="year-month-date" form="text" variable="issued" prefix="" suffix=""/>
+          <date date-parts="year-month-day" form="text" variable="issued" prefix="" suffix=""/>
           <text macro="locators-zh"/>
           <text variable="locator" prefix="，第" suffix="页"/>
         </else-if>
@@ -762,7 +762,7 @@
           <text macro="editor" suffix="主编"/>
           <text variable="title" prefix="《" suffix="》"/>
           <text macro="secondAuthor"/>
-          <date date-parts="year-month-date" form="text" variable="issued" prefix="，" suffix="，"/>
+          <date date-parts="year-month-day" form="text" variable="issued" prefix="，" suffix="，"/>
           <text variable="edition"/>
           <text variable="volume" prefix="第" suffix="卷"/>
           <text variable="publisher-place" prefix="，" suffix="："/>
