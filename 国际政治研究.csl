@@ -4,10 +4,10 @@
     default-locale="en-US" delimiter-precedes-last="never">
     <info>
         <title>国际政治研究</title>
-        <id>http://www.zotero.org/styles/the-journal-of-international-politics</id>
-        <link href="http://www.zotero.org/styles/the-journal-of-international-politics" rel="self" />
-        <link href="http://www.zotero.org/styles/social-sciences-in-china" rel="template" />
-        <link href="http://www.iwep.org.cn/cbw/cbw_xsqk/xsqk_sjjjyzz/xsqk_zsgf/" rel="documentation" />
+        <id>http://www.zotero.org/styles/the-journal-of-international-studies</id>
+        <link href="http://www.zotero.org/styles/the-journal-of-international-studies" rel="self" />
+        <link href="http://www.zotero.org/styles/journal-of-world-economics-and-politics" rel="template" />
+        <link href="https://www.jis.pku.edu.cn/Zhushi1407/1102984.htm" rel="documentation"/>
         <author>
             <name>Edward Zhou</name>
             <email>edwardzhoujiaxi@gmail.com</email>
@@ -19,7 +19,8 @@
         <category citation-format="note" />
         <category field="political_science" />
         <category field="social_science" />
-        <updated>2023-12-03T12:06:03+08:00</updated>
+        <issn>1671-4709</issn>
+        <updated>2023-12-03T12:24:04+08:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under
             a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
