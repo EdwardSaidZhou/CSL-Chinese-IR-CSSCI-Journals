@@ -19,7 +19,7 @@
         <category citation-format="note" />
         <category field="political_science" />
         <category field="social_science" />
-        <updated>2023-06-27</updated>
+        <updated>2023-12-03T12:06:03+08:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under
             a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
@@ -48,13 +48,11 @@
         </terms>
     </locale>
     <locale>
-        <terms>
-            <date variable="accessed">
-                <date-part name="year" suffix="-" />
-                <date-part name="month" form="numeric" suffix="-" />
-                <date-part name="day" />
-            </date>
-        </terms>
+        <date form="numeric">
+            <date-part name="year" />
+            <date-part name="month" form="numeric" prefix="-" />
+            <date-part name="day" prefix="-" />
+        </date>
     </locale>
     <macro name="author-en">
         <names variable="author" delimiter=", ">
@@ -434,7 +432,7 @@
             <if type="post post-weblog software webpage">
                 <group delimiter=", ">
                     <text variable="URL" />
-                    <date variable="accessed" />
+                    <date variable="accessed" form="numeric" />
                 </group>
             </if>
         </choose>
@@ -444,7 +442,7 @@
             <if type="post post-weblog software webpage">
                 <group delimiter="，">
                     <text variable="URL" />
-                    <date variable="accessed" />
+                    <date variable="accessed" form="numeric" />
                 </group>
             </if>
         </choose>

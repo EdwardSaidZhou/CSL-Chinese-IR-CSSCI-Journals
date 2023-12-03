@@ -12,10 +12,15 @@
     <category field="chinese humanities"/>
     <summary>根据pulipuli制作的APA中文格式、fanzhen《历史研究》引文规范以及《中国现代文学研究丛刊》引文规范改制，具体用法和特性见说明</summary>
     <published>2021-02-24</published>
-    <updated>2021-02-24</updated>
+    <updated>2023-12-03T11:30:17+08:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
+    <date form="text">
+      <date-part name="month" suffix=" "/>
+      <date-part name="day" suffix=", "/>
+      <date-part name="year" suffix=""/>
+    </date>
     <terms>
       <term name="editor" form="short">
         <single>ed.</single>
@@ -33,11 +38,6 @@
         <single>p. </single>
         <multiple>pp. </multiple>
       </term>
-      <date form="text">
-        <date-part name="month" suffix=" "/>
-        <date-part name="day" suffix=", "/>
-        <date-part name="year" suffix=""/>
-      </date>
     </terms>
   </locale>
   <locale xml:lang="zh">

@@ -12,10 +12,15 @@
     <category field="chinese humanities"/>
     <summary>根据fanzhen《历史研究》引文规范以及众多国际问题期刊引文规范改制，支持中英混排，仅支持今人论文、图书、章节、学位论文、网页</summary>
     <published>2021-01-16</published>
-    <updated>2021-01-16</updated>
+    <updated>2023-12-03T11:31:16+08:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
+    <date form="text">
+      <date-part name="month" suffix=" "/>
+      <date-part name="day" suffix=", "/>
+      <date-part name="year" suffix=""/>
+    </date>
     <terms>
       <term name="translator" form="short">
         <single>trans.</single>
@@ -25,11 +30,6 @@
         <single>p. </single>
         <multiple>pp. </multiple>
       </term>
-      <date form="text">
-        <date-part name="month" suffix=" "/>
-        <date-part name="day" suffix=", "/>
-        <date-part name="year" suffix=""/>
-      </date>
     </terms>
   </locale>
   <locale xml:lang="zh">
