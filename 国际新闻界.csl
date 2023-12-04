@@ -2,18 +2,22 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" sort-separator=" " demote-non-dropping-particle="display-and-sort" initialize="false" initialize-with=". " default-locale-sort="zh-CN">
   <info>
     <title>国际新闻界</title>
-    <id>http://www.zotero.org/styles/chinese-journal-of-journalism-and-communication</id>
-    <link href="http://www.zotero.org/styles/chinese-journal-of-journalism-and-communication" rel="self"/>
-    <link href="http://www.zotero.org/styles/sociological-studies" rel="template"/>
-    <link href="http://cjjc.ruc.edu.cn/CN/column/column9.shtml" rel="documentation"/>
+    <id>http://www.zotero.org/styles/Chinese-Journal-of-Journalism-and-Communication</id>
+    <link href="http://www.zotero.org/styles/Chinese-Journal-of-Journalism-and-Communication" rel="self"/>
+    <link href="http://www.zotero.org/styles/chicago-author-date" rel="template"/>
+    <link href="http://shxyj.ajcass.org/Home/channel?ChannelUrl=tgyq" rel="documentation"/>
     <author>
+      <name>Zeping Lee</name>
+      <email>zepinglee@gmail.com</email>
+    </author>
+    <contributor>
       <name>Edward Zhou</name>
       <email>edwardzhoujiaxi@gmail.com</email>
-    </author>
+    </contributor>
     <category citation-format="author-date"/>
-    <category field="communications"/>
-    <issn>1002-5685</issn>
-    <updated>2023-12-03T13:00:13+08:00</updated>
+    <category field="sociology"/>
+    <issn>1002-5936</issn>
+    <updated>2023-07-11</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="zh-CN">
