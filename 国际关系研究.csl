@@ -6,8 +6,8 @@
         <title>国际关系研究</title>
         <id>http://www.zotero.org/styles/journal-of-international-relations</id>
         <link href="http://www.zotero.org/styles/journal-of-international-relations" rel="self" />
-        <link href="http://www.zotero.org/styles/social-sciences-in-china" rel="template" />
-        <link href="http://www.iwep.org.cn/cbw/cbw_xsqk/xsqk_sjjjyzz/xsqk_zsgf/" rel="documentation" />
+        <link href="http://www.zotero.org/styles/journal-of-world-economics-and-politics" rel="template" />
+        <link href="https://iir.sass.org.cn/2019/0717/c1653a42491/page.htm" rel="documentation" />
         <author>
             <name>Edward Zhou</name>
             <email>edwardzhoujiaxi@gmail.com</email>
@@ -19,7 +19,7 @@
         <category citation-format="note" />
         <category field="political_science" />
         <category field="social_science" />
-        <updated>2023-06-27</updated>
+        <updated>2023-12-03T12:12:40+08:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under
             a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
@@ -48,13 +48,11 @@
         </terms>
     </locale>
     <locale>
-        <terms>
-            <date variable="accessed">
-                <date-part name="year" suffix="-" />
-                <date-part name="month" form="numeric" suffix="-" />
-                <date-part name="day" />
-            </date>
-        </terms>
+        <date form="numeric">
+            <date-part name="year" />
+            <date-part name="month" form="numeric" prefix="-" />
+            <date-part name="day" prefix="-" />
+        </date>
     </locale>
     <macro name="author-en">
         <names variable="author" delimiter=", ">

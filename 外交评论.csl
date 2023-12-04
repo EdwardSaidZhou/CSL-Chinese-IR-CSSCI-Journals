@@ -6,8 +6,8 @@
         <title>外交评论</title>
         <id>http://www.zotero.org/styles/foreign-affairs-review</id>
         <link href="http://www.zotero.org/styles/foreign-affairs-review" rel="self" />
-        <link href="http://www.zotero.org/styles/social-sciences-in-china" rel="template" />
-        <link href="http://www.iwep.org.cn/cbw/cbw_xsqk/xsqk_sjjjyzz/xsqk_zsgf/" rel="documentation" />
+        <link href="http://www.zotero.org/styles/journal-of-world-economics-and-politics" rel="template" />
+        <link href="https://wjxy.cbpt.cnki.net/WKH/WebPublication/index.aspx" rel="documentation" />
         <author>
             <name>Edward Zhou</name>
             <email>edwardzhoujiaxi@gmail.com</email>
@@ -19,7 +19,8 @@
         <category citation-format="note" />
         <category field="political_science" />
         <category field="social_science" />
-        <updated>2023-06-21</updated>
+        <issn>1003-3386</issn>
+        <updated>2023-12-03T12:12:43+08:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under
             a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
